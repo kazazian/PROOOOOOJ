@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Trace — 404</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <main class="page error-page">
+        <header class="header">
+            <a class="brand" href="index.html" aria-label="Inner Trace">
+                <img src="images/figma-assets/logo-left.svg" alt="">
+                <img src="images/figma-assets/logo-right.svg" alt="">
+            </a>
+
+            <nav class="nav" aria-label="Главная навигация">
+                <a href="about.html"><span class="nav-script">О</span><span> нас</span></a>
+                <a href="merch.html"><span class="nav-script">М</span><span>ерч</span></a>
+                <a href="events.html"><span>Соб</span><span class="nav-script">Ы</span><span>тия</span></a>
+                <a href="history.html"><span>Истори</span><span class="nav-script">Я</span></a>
+                <a href="https://kazazian.github.io/pred/"><span>Онлай</span><span class="nav-script">Н</span><span>-квест</span></a>
+            </nav>
+        </header>
+
+        <section class="error-hero" aria-label="Страница не найдена">
+            <h1>404</h1>
+            <div class="error-game is-waiting" tabindex="0" role="button" aria-label="Игра: нажмите пробел, стрелку вверх или кликните, чтобы начать и подпрыгнуть" data-error-game>
+                <div class="error-game__score">очки: <output data-error-score>0</output></div>
+                <p class="error-game__start" data-error-start>нажмите чтобы начать</p>
+                <div class="error-game__over" data-error-over>
+                    <p>вы проиграли</p>
+                    <button type="button" data-error-restart>начать заново</button>
+                </div>
+                <div class="error-game__ground" aria-hidden="true"></div>
+                <img class="error-figure" src="images/figma-assets/zine/error-left.svg" alt="" data-error-player>
+                <span class="error-mark" aria-hidden="true" data-error-obstacle></span>
+            </div>
+        </section>
+
+        <section class="error-band" aria-hidden="true"></section>
+
+        <footer class="footer">
+            <div class="footer-copy">
+                <p>При наличии дополнительных вопросов звоните но номеру</p>
+                <a href="tel:+79379972921">+7(937)-997-29-21</a>
+                <small>© 2026, Казазян Арина Гариковна</small>
+            </div>
+            <img src="images/figma-assets/footer-logo.svg" alt="Inner Trace">
+        </footer>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

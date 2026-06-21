@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Trace — Мерч</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <main class="page merch-page">
+        <header class="header">
+            <a class="brand" href="index.html" aria-label="Inner Trace">
+                <img src="images/figma-assets/logo-left.svg" alt="">
+                <img src="images/figma-assets/logo-right.svg" alt="">
+            </a>
+
+            <nav class="nav" aria-label="Главная навигация">
+                <a href="about.html"><span class="nav-script">О</span><span> нас</span></a>
+                <a class="is-active" href="merch.html"><span class="nav-script">М</span><span>ерч</span></a>
+                <a href="events.html"><span>Соб</span><span class="nav-script">Ы</span><span>тия</span></a>
+                <a href="history.html"><span>Истори</span><span class="nav-script">Я</span></a>
+                <a href="https://kazazian.github.io/pred/"><span>Онлай</span><span class="nav-script">Н</span><span>-квест</span></a>
+            </nav>
+        </header>
+
+        <section class="merch-shop" data-merch-shop>
+            <aside class="merch-sidebar" aria-label="Категории мерча">
+                <button class="merch-sidebar__link" type="button" data-merch-filter="all">Смотреть все</button>
+                <button class="merch-sidebar__link is-active" type="button" data-merch-filter="clothes">Одежда</button>
+                <button class="merch-sidebar__link" type="button" data-merch-filter="gift">Подарочные карты</button>
+                <button class="merch-sidebar__link" type="button" data-merch-filter="other">Прочее</button>
+            </aside>
+
+            <div class="merch-stage" aria-live="polite">
+                <video class="merch-stage__video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+                    <source src="videos/inner-trace-hero.mp4?v=2" type="video/mp4">
+                </video>
+                <div class="merch-grid">
+                    <article class="merch-card" data-merch-card data-category="clothes">
+                        <div class="merch-card__visual merch-card__visual--cap">
+                            <img src="images/figma-assets/merch/Frame 2136139179.png" alt="Кепка Inner Trace">
+                        </div>
+                        <div class="merch-card__body">
+                            <h2>Кепка</h2>
+                            <p>7 500 р</p>
+                            <div class="merch-options merch-options--single">
+                                <span>one size</span>
+                            </div>
+                            <a href="404.html">Купить</a>
+                        </div>
+                    </article>
+
+                    <article class="merch-card" data-merch-card data-category="clothes">
+                        <div class="merch-card__visual merch-card__visual--shirt">
+                            <img src="images/figma-assets/merch/Frame 2136139180.png" alt="Футболка Inner Trace">
+                        </div>
+                        <div class="merch-card__body">
+                            <h2>Футболка</h2>
+                            <p>2 500 р</p>
+                            <div class="merch-options" aria-label="Размеры">
+                                <button type="button" aria-pressed="true">XS</button>
+                                <button type="button" aria-pressed="false">S</button>
+                                <button type="button" aria-pressed="false">M</button>
+                                <button type="button" aria-pressed="false">L</button>
+                                <button type="button" aria-pressed="false">XL</button>
+                            </div>
+                            <a href="404.html">Купить</a>
+                        </div>
+                    </article>
+
+                    <article class="merch-card" data-merch-card data-category="gift">
+                        <div class="merch-card__visual merch-card__visual--gift-3">
+                            <img src="images/figma-assets/merch/Frame 2136139181.png" alt="Подарочный сертификат Inner Trace">
+                        </div>
+                        <div class="merch-card__body">
+                            <h2>Подарочный сертификат</h2>
+                            <p>3 000 р</p>
+                            <a href="404.html">Купить</a>
+                        </div>
+                    </article>
+
+                    <article class="merch-card" data-merch-card data-category="gift">
+                        <div class="merch-card__visual merch-card__visual--gift-6">
+                            <img src="images/figma-assets/merch/Frame 2136139182.png" alt="Подарочный сертификат Inner Trace">
+                        </div>
+                        <div class="merch-card__body">
+                            <h2>Подарочный сертификат</h2>
+                            <p>6 000 р</p>
+                            <a href="404.html">Купить</a>
+                        </div>
+                    </article>
+
+                    <article class="merch-card" data-merch-card data-category="gift">
+                        <div class="merch-card__visual merch-card__visual--gift-7">
+                            <img src="images/figma-assets/merch/Frame 2136139185.png" alt="Подарочный сертификат Inner Trace">
+                        </div>
+                        <div class="merch-card__body">
+                            <h2>Подарочный сертификат</h2>
+                            <p>7 000 р</p>
+                            <a href="404.html">Купить</a>
+                        </div>
+                    </article>
+
+                    <article class="merch-card" data-merch-card data-category="other">
+                        <div class="merch-card__visual merch-card__visual--notebook">
+                            <img src="images/figma-assets/merch/Frame 2136139184.png" alt="Блокнот Inner Trace">
+                        </div>
+                        <div class="merch-card__body">
+                            <h2>Блокнот</h2>
+                            <p>700 р</p>
+                            <a href="404.html">Купить</a>
+                        </div>
+                    </article>
+
+                    <article class="merch-card" data-merch-card data-category="other">
+                        <div class="merch-card__visual merch-card__visual--jenga">
+                            <img src="images/figma-assets/merch/Frame 2136139183.png" alt="Дженга Inner Trace">
+                        </div>
+                        <div class="merch-card__body">
+                            <h2>Дженга</h2>
+                            <p>2 500 р</p>
+                            <a href="404.html">Купить</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-copy">
+                <p>При наличии дополнительных вопросов звоните но номеру</p>
+                <a href="tel:+79379972921">+7(937)-997-29-21</a>
+                <small>© 2026, Казазян Арина Гариковна</small>
+            </div>
+            <img src="images/figma-assets/footer-logo.svg" alt="Inner Trace">
+        </footer>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

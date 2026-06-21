@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,500;0,900;1,200;1,500;1,900&family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+@font-face {
+    font-family: "American Retro";
+    src: url("../fonts/web/American-Retro.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "LeoHand";
+    src: url("../fonts/web/LeoHand.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Forma DJR Cyrilic Variable";
+    src: url("../fonts/web/FormaDJRCyrillicVariable.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Forma DJR Cyrillic Text";
+    src: url("../fonts/web/FormaDJRCyrillicText-ExtraLight.otf") format("opentype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Forma DJR Cyrillic Text";
+    src: url("../fonts/web/FormaDJRCyrillicText-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Forma DJR Cyrillic Text";
+    src: url("../fonts/web/FormaDJRCyrillicText-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Forma DJR Cyrillic Micro";
+    src: url("../fonts/web/FormaDJRCyrillicMicro-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "TT Inters";
+    src: url("../fonts/web/TTInters.otf") format("opentype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/web/TTInters.otf") format("opentype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "DIN Condensed";
+    src: url("../fonts/web/DIN-Condensed-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Snell Roundhand";
+    src: local("Snell Roundhand"), url("../fonts/web/SnellRoundhand.ttc") format("truetype-collection");
+    font-weight: 400 900;
+    font-style: normal;
+    font-display: swap;
+}

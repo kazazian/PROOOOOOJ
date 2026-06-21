@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Trace — События</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <main class="page events-page">
+        <header class="header">
+            <a class="brand" href="index.html" aria-label="Inner Trace">
+                <img src="images/figma-assets/logo-left.svg" alt="">
+                <img src="images/figma-assets/logo-right.svg" alt="">
+            </a>
+
+            <nav class="nav" aria-label="Главная навигация">
+                <a href="about.html"><span class="nav-script">О</span><span> нас</span></a>
+                <a href="merch.html"><span class="nav-script">М</span><span>ерч</span></a>
+                <a class="is-active" href="events.html"><span>Соб</span><span class="nav-script">Ы</span><span>тия</span></a>
+                <a href="history.html"><span>Истори</span><span class="nav-script">Я</span></a>
+                <a href="https://kazazian.github.io/pred/"><span>Онлай</span><span class="nav-script">Н</span><span>-квест</span></a>
+            </nav>
+        </header>
+
+        <section class="quest-catalog">
+            <div class="quest-catalog__heading">
+                <h1>
+                    <span>Расписание</span>
+                    <strong><em>К</em><span>вестов</span></strong>
+                </h1>
+                <p>июнь <strong>2026</strong></p>
+            </div>
+
+            <div class="quest-catalog__line"></div>
+
+            <div class="quest-grid">
+                <article class="quest-card">
+                    <div class="quest-card__image">
+                        <img src="images/figma-assets/pages/quest-1.png" alt="Ужас бытия">
+                        <strong>18+</strong>
+                        <span>Доступно</span>
+                    </div>
+                    <div class="quest-card__body">
+                        <h2>УЖАС БЫТИЯ</h2>
+                        <p>Жилой комплекс не отпускающий своих постояльцев</p>
+                        <div class="quest-card__meta">
+                            <span>60 мин</span>
+                            <span>4</span>
+                            <span class="fear-meter"><i></i><i></i><i></i><i></i><i></i></span>
+                        </div>
+                        <a href="#booking-modal" data-modal-open>Забронировать слот</a>
+                    </div>
+                </article>
+
+                <article class="quest-card">
+                    <div class="quest-card__image">
+                        <img src="images/figma-assets/pages/quest-2.png" alt="Ужас небытия">
+                        <strong>18+</strong>
+                        <span>Доступно</span>
+                    </div>
+                    <div class="quest-card__body">
+                        <h2>УЖАС БЫТИЯ</h2>
+                        <p>Жилой комплекс не отпускающий своих постояльцев</p>
+                        <div class="quest-card__meta">
+                            <span>60 мин</span>
+                            <span>4</span>
+                            <span class="fear-meter"><i></i><i></i><i></i><i></i><i></i></span>
+                        </div>
+                        <a href="#booking-modal" data-modal-open>Забронировать слот</a>
+                    </div>
+                </article>
+
+                <article class="quest-card">
+                    <div class="quest-card__image">
+                        <img src="images/figma-assets/pages/quest-3.png" alt="Невероятный ужас бытия">
+                        <strong>18+</strong>
+                        <span>Доступно</span>
+                    </div>
+                    <div class="quest-card__body">
+                        <h2>УЖАС БЫТИЯ</h2>
+                        <p>Жилой комплекс не отпускающий своих постояльцев</p>
+                        <div class="quest-card__meta">
+                            <span>60 мин</span>
+                            <span>4</span>
+                            <span class="fear-meter"><i></i><i></i><i></i><i></i><i></i></span>
+                        </div>
+                        <a href="#booking-modal" data-modal-open>Забронировать слот</a>
+                    </div>
+                </article>
+
+                <article class="quest-card">
+                    <div class="quest-card__image">
+                        <img src="images/figma-assets/pages/quest-4.png" alt="Внутренний след">
+                        <strong>18+</strong>
+                        <span>Доступно</span>
+                    </div>
+                    <div class="quest-card__body">
+                        <h2>УЖАС БЫТИЯ</h2>
+                        <p>Жилой комплекс не отпускающий своих постояльцев</p>
+                        <div class="quest-card__meta">
+                            <span>60 мин</span>
+                            <span>4</span>
+                            <span class="fear-meter"><i></i><i></i><i></i><i></i><i></i></span>
+                        </div>
+                        <a href="#booking-modal" data-modal-open>Забронировать слот</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-copy">
+                <p>При наличии дополнительных вопросов звоните но номеру</p>
+                <a href="tel:+79379972921">+7(937)-997-29-21</a>
+                <small>© 2026, Казазян Арина Гариковна</small>
+            </div>
+            <img src="images/figma-assets/footer-logo.svg" alt="Inner Trace">
+        </footer>
+    </main>
+    <div class="booking-modal" id="booking-modal" aria-hidden="true">
+        <div class="booking-modal__backdrop" data-modal-close></div>
+        <section class="booking-modal__panel" role="dialog" aria-modal="true" aria-labelledby="booking-title">
+            <button class="booking-modal__close" type="button" aria-label="Закрыть окно" data-modal-close>×</button>
+            <h2 class="booking-modal__title" id="booking-title">
+                <span>Записаться на</span>
+                <strong><em>К</em><span>вест</span></strong>
+            </h2>
+            <form class="booking-form">
+                <div class="booking-form__grid">
+                    <div class="booking-form__left">
+                        <label class="booking-field">
+                            <span>Как вас называть?</span>
+                            <input type="text" name="name" autocomplete="name">
+                        </label>
+
+                        <div class="booking-field booking-counter">
+                            <span>Сколько вас будет?</span>
+                            <div class="booking-counter__control">
+                                <button type="button" aria-label="Уменьшить количество">-</button>
+                                <output>3</output>
+                                <button type="button" aria-label="Увеличить количество">+</button>
+                            </div>
+                        </div>
+
+                        <div class="booking-checks">
+                            <label><input type="checkbox" name="adult"><span>Мне исполнилось 18 лет</span></label>
+                            <label><input type="checkbox" name="privacy"><span>Я согласен на обработку персональных данных</span></label>
+                            <label><input type="checkbox" name="voluntary"><span>Иду добровольно</span></label>
+                        </div>
+                    </div>
+
+                    <div class="booking-form__middle">
+                        <label class="booking-field">
+                            <span>Выберите квест</span>
+                            <input type="text" name="quest" list="quests">
+                            <datalist id="quests">
+                                <option value="Ужас бытия"></option>
+                                <option value="Невероятный ужас бытия"></option>
+                                <option value="Ужас небытия"></option>
+                            </datalist>
+                        </label>
+
+                        <label class="booking-field">
+                            <span>Контакт для связи</span>
+                            <input type="tel" name="phone" autocomplete="tel">
+                        </label>
+                    </div>
+
+                    <fieldset class="booking-time">
+                        <legend>Выберите время</legend>
+                        <label><input type="radio" name="time" value="18:30" checked><span>18:30</span></label>
+                        <label><input type="radio" name="time" value="19:30"><span>19:30</span></label>
+                        <label><input type="radio" name="time" value="19:30-2"><span>19:30</span></label>
+                        <label><input type="radio" name="time" value="19:30-3"><span>19:30</span></label>
+                    </fieldset>
+                </div>
+
+                <button class="booking-form__submit" type="submit">
+                    Отправить форму
+                </button>
+            </form>
+        </section>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

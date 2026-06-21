@@ -1,13 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inner Trace</title>
     <link rel="stylesheet" href="css/style.css">
-    
 </head>
 <body>
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <main class="page">
+        <section class="hero section-noise">
+            <header class="header">
+                <a class="brand" href="index.html" aria-label="Inner Trace">
+                    <img src="images/figma-assets/logo-left.svg" alt="">
+                    <img src="images/figma-assets/logo-right.svg" alt="">
+                </a>
+
+                <nav class="nav" aria-label="Главная навигация">
+                    <a href="about.html"><span class="nav-script">О</span><span> нас</span></a>
+                    <a href="merch.html"><span class="nav-script">М</span><span>ерч</span></a>
+                    <a href="events.html"><span>Соб</span><span class="nav-script">Ы</span><span>тия</span></a>
+                    <a href="history.html"><span>Истори</span><span class="nav-script">Я</span></a>
+                    <a href="https://kazazian.github.io/pred/"><span>Онлай</span><span class="nav-script">Н</span><span>-квест</span></a>
+                </nav>
+            </header>
+
+            <div class="hero-content">
+                <h1 class="hero-title" aria-label="Inner Trace">
+                    <img src="images/figma-assets/title-left.svg" alt="">
+                    <img src="images/figma-assets/title-right.svg" alt="">
+                </h1>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#booking-modal" data-modal-open>
+                        <span>Записаться на квест</span>
+                        <img src="images/figma-assets/arrow-right.svg" alt="">
+                    </a>
+                    <img class="amp" src="images/figma-assets/amp.svg" alt="">
+                    <a class="button button-secondary" href="#trailer">
+                        <img src="images/figma-assets/arrow-left.svg" alt="">
+                        <span>Смотреть трейлер</span>
+                    </a>
+                </div>
+
+                <p class="hero-text">
+                    пространство квестов, где истории оставляют след. Мы создаём не просто игры, а погружения: с атмосферой, смыслом и выбором, который влияет на ход событий. Здесь каждый шаг — часть твоего маршрута внутрь себя и за пределы привычного.
+                </p>
+
+                <div class="hero-image">
+                    <video class="hero-video" poster="images/figma-assets/hero.png" autoplay muted loop playsinline preload="auto" aria-label="Кадр квеста Inner Trace">
+                        <source src="videos/inner-trace-hero.mp4?v=2" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="schedule section-noise" id="schedule">
+            <div class="schedule-heading">
+                <h2>
+                    <span class="schedule-title-top">РАСПИСАНИЕ</span>
+                    <strong class="schedule-title-bottom">
+                        <em>К</em><span>ВЕСТОВ</span>
+                    </strong>
+                </h2>
+                <a href="events.html">Смотреть все</a>
+                <p class="schedule-month">июнь <strong>2026</strong></p>
+            </div>
+
+            <div class="schedule-line" aria-hidden="true"></div>
+
+            <div class="schedule-list">
+                <article class="schedule-item">
+                    <div class="date-time">
+                        <span>31 мая</span>
+                        <time>19:30</time>
+                    </div>
+                    <h3>Ужас бытия</h3>
+                    <p>На 4 жертвы</p>
+                </article>
+                <article class="schedule-item">
+                    <div class="date-time">
+                        <span>1 июня</span>
+                        <time>20:30</time>
+                    </div>
+                    <h3>Невероятный ужас бытия</h3>
+                    <p>На 3 жертвы</p>
+                </article>
+                <article class="schedule-item">
+                    <div class="date-time">
+                        <span>4 июня</span>
+                        <time>21:00</time>
+                    </div>
+                    <h3>Ужас небытия</h3>
+                    <p>На 4 жертвы</p>
+                </article>
+                <article class="schedule-item">
+                    <div class="date-time">
+                        <span>12 июня</span>
+                        <time>18:30</time>
+                    </div>
+                    <h3>Ужас бытия</h3>
+                    <p>На 2 жертвы</p>
+                </article>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-copy">
+                <p>При наличии дополнительных вопросов звоните но номеру</p>
+                <a href="tel:+79379972921">+7(937)-997-29-21</a>
+                <small>© 2026, Казазян Арина Гариковна</small>
+            </div>
+            <img src="images/figma-assets/footer-logo.svg" alt="Inner Trace">
+        </footer>
+    </main>
+
+    <div class="booking-modal" id="booking-modal" aria-hidden="true">
+        <div class="booking-modal__backdrop" data-modal-close></div>
+        <section class="booking-modal__panel" role="dialog" aria-modal="true" aria-labelledby="booking-title">
+            <button class="booking-modal__close" type="button" aria-label="Закрыть окно" data-modal-close>×</button>
+            <h2 class="booking-modal__title" id="booking-title">
+                <span>Записаться на</span>
+                <strong><em>К</em><span>вест</span></strong>
+            </h2>
+            <form class="booking-form">
+                <div class="booking-form__grid">
+                    <div class="booking-form__left">
+                        <label class="booking-field">
+                            <span>Как вас называть?</span>
+                            <input type="text" name="name" autocomplete="name">
+                        </label>
+
+                        <div class="booking-field booking-counter">
+                            <span>Сколько вас будет?</span>
+                            <div class="booking-counter__control">
+                                <button type="button" aria-label="Уменьшить количество">-</button>
+                                <output>3</output>
+                                <button type="button" aria-label="Увеличить количество">+</button>
+                            </div>
+                        </div>
+
+                        <div class="booking-checks">
+                            <label><input type="checkbox" name="adult"><span>Мне исполнилось 18 лет</span></label>
+                            <label><input type="checkbox" name="privacy"><span>Я согласен на обработку персональных данных</span></label>
+                            <label><input type="checkbox" name="voluntary"><span>Иду добровольно</span></label>
+                        </div>
+                    </div>
+
+                    <div class="booking-form__middle">
+                        <label class="booking-field">
+                            <span>Выберите квест</span>
+                            <input type="text" name="quest" list="quests">
+                            <datalist id="quests">
+                                <option value="Ужас бытия"></option>
+                                <option value="Невероятный ужас бытия"></option>
+                                <option value="Ужас небытия"></option>
+                            </datalist>
+                        </label>
+
+                        <label class="booking-field">
+                            <span>Контакт для связи</span>
+                            <input type="tel" name="phone" autocomplete="tel">
+                        </label>
+                    </div>
+
+                    <fieldset class="booking-time">
+                        <legend>Выберите время</legend>
+                        <label><input type="radio" name="time" value="18:30" checked><span>18:30</span></label>
+                        <label><input type="radio" name="time" value="19:30"><span>19:30</span></label>
+                        <label><input type="radio" name="time" value="19:30-2"><span>19:30</span></label>
+                        <label><input type="radio" name="time" value="19:30-3"><span>19:30</span></label>
+                    </fieldset>
+                </div>
+
+                <button class="booking-form__submit" type="submit">
+                    Отправить форму
+                </button>
+            </form>
+        </section>
+    </div>
+
     <script src="./script.js"></script>
 </body>
-</html> 
+</html>
