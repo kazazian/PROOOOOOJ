@@ -4,11 +4,38 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeButtons = document.querySelectorAll("[data-modal-close]");
     const counters = document.querySelectorAll(".booking-counter__control");
     const bookingForms = document.querySelectorAll(".booking-form");
+    const menuToggles = document.querySelectorAll(".menu-toggle");
     const mapBlock = document.querySelector("[data-map-block]");
     const mapToggle = document.querySelector("[data-map-toggle]");
     const zineCarousels = document.querySelectorAll("[data-zine-carousel]");
     const errorGame = document.querySelector("[data-error-game]");
     const merchShop = document.querySelector("[data-merch-shop]");
+
+    document.addEventListener("click", (event) => {
+        const toggle = event.target.closest(".menu-toggle");
+
+        if (toggle) {
+            const header = toggle.closest(".header");
+            const isOpen = header?.classList.toggle("is-nav-open") || false;
+
+            toggle.classList.toggle("is-active", isOpen);
+            toggle.setAttribute("aria-expanded", String(isOpen));
+            toggle.setAttribute("aria-label", isOpen ? "Закрыть меню" : "Открыть меню");
+            return;
+        }
+
+        const navLink = event.target.closest(".header .nav a");
+
+        if (navLink) {
+            const header = navLink.closest(".header");
+            const headerToggle = header?.querySelector(".menu-toggle");
+
+            header?.classList.remove("is-nav-open");
+            headerToggle?.classList.remove("is-active");
+            headerToggle?.setAttribute("aria-expanded", "false");
+            headerToggle?.setAttribute("aria-label", "Открыть меню");
+        }
+    });
 
     if (modal && openButtons.length) {
         const openModal = (event) => {
