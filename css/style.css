@@ -49,6 +49,26 @@ body {
     will-change: transform, background-position;
 }
 
+.event-flash {
+    position: fixed;
+    inset: 0;
+    z-index: 12000;
+    background: #000 url("../images/figma-assets/effects/event-flash.png") center / cover no-repeat;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.event-flash.is-visible {
+    animation: event-flash-in 300ms linear forwards;
+}
+
+@keyframes event-flash-in {
+    0%,
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes noise-shift {
     0% {
         transform: translate3d(0, 0, 0);
@@ -1230,6 +1250,14 @@ img {
     place-items: center;
     height: 364px;
     overflow: hidden;
+    background: transparent;
+}
+
+.merch-card__visual::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    z-index: 0;
     background:
         linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, var(--black) 100%),
         url("../images/figma-assets/merch/card-noise-bg.png") center / cover no-repeat;
@@ -1282,6 +1310,10 @@ img {
     inset: 0;
     height: auto;
     background: var(--black);
+}
+
+.merch-card[data-category="gift"] .merch-card__visual::before {
+    display: none;
 }
 
 .merch-card[data-category="gift"] .merch-card__visual::after {
@@ -1632,47 +1664,42 @@ img {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 37px;
-    min-height: 61px;
+    gap: 42px;
+    min-height: 74px;
     margin-top: 16px;
     padding-top: 21px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.9);
+    color: #fff;
     font-family: var(--mono);
-    font-size: 16px;
+    font-size: 30px;
     font-weight: 400;
+    line-height: 1;
 }
 
-.quest-card__meta > span:not(.fear-meter) {
+.quest-card__stat {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    white-space: nowrap;
+}
+
+.quest-card__stat img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    flex: 0 0 auto;
+    image-rendering: auto;
+}
+
+.fear-meter {
     display: inline-flex;
     align-items: center;
     gap: 6px;
 }
 
-.quest-card__meta > span:not(.fear-meter)::before {
-    content: "";
-    width: 18px;
-    height: 18px;
-    border: 2px solid rgba(255, 255, 255, 0.72);
-}
-
-.quest-card__meta > span:nth-child(1)::before {
-    border-radius: 50%;
-}
-
-.quest-card__meta > span:nth-child(2)::before {
-    border-radius: 50% 50% 44% 44%;
-    border-top-width: 5px;
-}
-
-.fear-meter {
-    display: inline-flex;
-    gap: 4px;
-}
-
 .fear-meter i {
-    width: 25px;
-    height: 22px;
+    width: 30px;
+    height: 28px;
     border-radius: 0;
     background: var(--red);
     clip-path: polygon(50% 0, 62% 33%, 98% 33%, 69% 54%, 80% 91%, 50% 68%, 20% 91%, 31% 54%, 2% 33%, 38% 33%);
@@ -2071,11 +2098,10 @@ img {
 .error-mark {
     position: absolute;
     left: 0;
-    bottom: 32px;
+    bottom: 7px;
     width: 82px;
     height: 85px;
-    border: 10px solid var(--red);
-    border-radius: 50% 50% 48% 48%;
+    object-fit: contain;
     opacity: 1;
     will-change: transform;
 }
@@ -2084,27 +2110,6 @@ img {
 .error-game.is-over .error-mark {
     opacity: 0;
 }
-
-.error-mark::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -32px;
-    width: 18px;
-    height: 42px;
-    background: var(--red);
-    transform: translateX(-50%) rotate(34deg);
-    transform-origin: top center;
-}
-
-.error-mark::after {
-    content: "";
-    position: absolute;
-    inset: 22px;
-    border-radius: 50%;
-    background: var(--black);
-}
-
 
 @keyframes error-jump {
     0%,
@@ -2588,6 +2593,31 @@ body.modal-open {
         line-height: 0.9;
     }
 
+    .quest-card__meta {
+        gap: 20px;
+        min-height: 58px;
+        padding-top: 16px;
+        font-size: 19px;
+    }
+
+    .quest-card__stat {
+        gap: 9px;
+    }
+
+    .quest-card__stat img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .fear-meter {
+        gap: 4px;
+    }
+
+    .fear-meter i {
+        width: 22px;
+        height: 20px;
+    }
+
     .quest-card a {
         font-size: 12px;
         letter-spacing: 2px;
@@ -2836,7 +2866,6 @@ body.modal-open {
     .error-mark {
         width: 62px;
         height: 66px;
-        border-width: 8px;
     }
 
     .error-game__start {

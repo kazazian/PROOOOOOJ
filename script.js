@@ -4,12 +4,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeButtons = document.querySelectorAll("[data-modal-close]");
     const counters = document.querySelectorAll(".booking-counter__control");
     const bookingForms = document.querySelectorAll(".booking-form");
-    const menuToggles = document.querySelectorAll(".menu-toggle");
+    const eventFlashLinks = document.querySelectorAll("[data-event-flash]");
     const mapBlock = document.querySelector("[data-map-block]");
     const mapToggle = document.querySelector("[data-map-toggle]");
     const zineCarousels = document.querySelectorAll("[data-zine-carousel]");
     const errorGame = document.querySelector("[data-error-game]");
     const merchShop = document.querySelector("[data-merch-shop]");
+
+    if (eventFlashLinks.length) {
+        const flash = document.createElement("div");
+
+        flash.className = "event-flash";
+        flash.setAttribute("aria-hidden", "true");
+        document.body.appendChild(flash);
+
+        eventFlashLinks.forEach((link) => {
+            link.addEventListener("click", (event) => {
+                if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) {
+                    return;
+                }
+
+                event.preventDefault();
+                flash.classList.remove("is-visible");
+                void flash.offsetWidth;
+                flash.classList.add("is-visible");
+
+                window.setTimeout(() => {
+                    window.location.href = link.href;
+                }, 300);
+            });
+        });
+    }
 
     document.addEventListener("click", (event) => {
         const toggle = event.target.closest(".menu-toggle");
@@ -189,7 +214,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let hasScoredThisRound = false;
         let animationFrameId;
         let obstacleScale = 1;
-        let obstacleTilt = 0;
 
         const updateScore = () => {
             if (scoreOutput) {
@@ -204,14 +228,13 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             obstacleScale = 0.78 + Math.random() * 0.52;
-            obstacleTilt = -18 + Math.random() * 36;
             obstacleX = errorGame.offsetWidth + obstacle.offsetWidth + Math.random() * 520;
             obstacleSpeed = 980 + Math.random() * 1120;
             nextObstacleAt = performance.now() + delay;
             hasJumpedThisRound = false;
             hasScoredThisRound = false;
             obstacle.style.opacity = "0";
-            obstacle.style.transform = `translateX(${obstacleX}px) scale(${obstacleScale}) rotate(${obstacleTilt}deg)`;
+            obstacle.style.transform = `translateX(${obstacleX}px) scale(${obstacleScale})`;
         };
 
         const startGame = () => {
@@ -264,7 +287,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             obstacle.style.opacity = "1";
             obstacleX -= obstacleSpeed * deltaSeconds;
-            obstacle.style.transform = `translateX(${obstacleX}px) scale(${obstacleScale}) rotate(${obstacleTilt}deg)`;
+            obstacle.style.transform = `translateX(${obstacleX}px) scale(${obstacleScale})`;
 
             const playerRect = player.getBoundingClientRect();
             const obstacleRect = obstacle.getBoundingClientRect();
