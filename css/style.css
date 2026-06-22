@@ -10,12 +10,8 @@
     --mono: "JetBrains Mono", "Courier New", monospace;
     --forma-text: "Forma DJR Cyrillic Text", "Forma DJR Cyrilic Variable", "Inter", Arial, sans-serif;
     --forma-micro: "Forma DJR Cyrillic Micro", "Forma DJR Cyrilic Variable", "Inter", Arial, sans-serif;
-    --retro: "American Retro", "LeoHand", "Forma DJR Cyrillic Text", "Inter", Arial, sans-serif;
     --script: "Snell Roundhand", "LeoHand", "Brush Script MT", cursive;
-    --condensed: "DIN Condensed", "Arial Narrow", "Inter", sans-serif;
-    --display: "Snell Roundhand", Georgia, "Times New Roman", serif;
     --stroke-black: 1px 0 0 var(--black), -1px 0 0 var(--black), 0 1px 0 var(--black), 0 -1px 0 var(--black);
-    --stroke-red: 1px 0 0 var(--red), -1px 0 0 var(--red), 0 1px 0 var(--red), 0 -1px 0 var(--red);
 }
 
 * {
