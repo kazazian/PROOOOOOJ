@@ -2697,6 +2697,35 @@ body.modal-open {
         min-height: auto;
     }
 
+    .schedule h2 {
+        letter-spacing: -2.2px;
+    }
+
+    .schedule-title-top,
+    .schedule-title-bottom,
+    .schedule-title-bottom span {
+        font-family: "Inter", "TT Inters", sans-serif;
+        font-synthesis: none;
+    }
+
+    .schedule-title-top {
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    .schedule-title-bottom,
+    .schedule-title-bottom span {
+        font-weight: 200;
+        font-style: italic;
+    }
+
+    .schedule-title-bottom em {
+        font-family: var(--script);
+        font-weight: 400;
+        font-style: italic;
+        font-synthesis: none;
+    }
+
     .schedule-heading > a {
         grid-column: 1;
         grid-row: 2;
